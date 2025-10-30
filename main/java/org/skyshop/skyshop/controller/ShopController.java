@@ -4,6 +4,7 @@ import org.skypro.skyshop.service.BasketService;
 import org.skypro.skyshop.service.UserBasket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.skypro.skyshop.model.search.SearchService;
@@ -46,7 +47,7 @@ public class ShopController {
     }
 
     @GetMapping("/basket/{id}")
-    public String addProduct(@RequestParam UUID id) {
+    public String addProduct(@PathVariable("id") UUID id) {
         basketService.addToProductBasket(id);
         return "Продукт успешно добавлен";
     }

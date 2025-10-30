@@ -1,14 +1,17 @@
 package org.skyshop.skyshop.model.search.basket;
 
 import org.skypro.skyshop.model.search.product.Product;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.Collections;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Service
+@Component
+@SessionScope
 public class ProductBasket {
     private final Map<UUID, Integer> basketItems;
 
