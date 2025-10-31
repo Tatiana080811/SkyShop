@@ -1,7 +1,7 @@
-package org.skypro.skyshop.service;
+package org.skyshop.skyshop.service;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.skypro.skyshop.model.search.product.Product;
+import org.skyshop.skyshop.model.search.product.Product;
 
 import java.math.BigDecimal;
 

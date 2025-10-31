@@ -1,6 +1,6 @@
-package org.skypro.skyshop.model.search.product;
+package org.skyshop.skyshop.model.search.product;
 
-import org.skypro.skyshop.model.search.Searchable;
+import org.skyshop.skyshop.model.search.Searchable;
 
 import java.math.BigDecimal;
 import java.util.Objects;

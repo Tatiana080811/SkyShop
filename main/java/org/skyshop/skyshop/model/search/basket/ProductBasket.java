@@ -1,6 +1,6 @@
 package org.skyshop.skyshop.model.search.basket;
 
-import org.skypro.skyshop.model.search.product.Product;
+import org.skyshop.skyshop.model.search.product.Product;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;

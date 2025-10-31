@@ -1,14 +1,15 @@
-package org.skypro.skyshop.service;
+package org.skyshop.skyshop.service;
 
+import org.skyshop.skyshop.exception.NoSuchProductException;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
 import java.util.*;
 
-import org.skypro.skyshop.model.search.product.Product;
-import org.skypro.skyshop.model.search.article.Article;
-import org.skypro.skyshop.model.search.Searchable;
+import org.skyshop.skyshop.model.search.product.Product;
+import org.skyshop.skyshop.model.search.article.Article;
+import org.skyshop.skyshop.model.search.Searchable;
 
 @Service
 public class StorageService {
@@ -19,7 +20,7 @@ public class StorageService {
     public StorageService(Map<UUID, Product> products, Map<UUID, Article> articles) {
         this.products = products;
         this.articles = articles;
-        initializeTestData(); // Можно убрать, если хотите отделить тестовую инициализацию
+        initializeTestData();
     }
 
     public Collection<Product> getAllProducts() {
@@ -55,9 +56,12 @@ public class StorageService {
         articles.put(article2.getId(), article2);
         articles.put(article3.getId(), article3);
     }
-
-    public Optional<Product> getProductById(UUID productId) {
-        return Optional.ofNullable(products.get(productId));
+    public Product getProductById(UUID productId) throws NoSuchProductException {
+        if (!products.containsKey(productId)) {
+            throw new NoSuchProductException("Продукт с указанным id не найден");
+        }
+        return products.get(productId);
     }
 }
+
 

@@ -1,12 +1,12 @@
-package org.skypro.skyshop.model.search;
+package org.skyshop.skyshop.model.search;
 
-import org.skypro.skyshop.service.StorageService;
+import org.skyshop.skyshop.service.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.skypro.skyshop.model.search.SearchResult;
-import org.skypro.skyshop.model.search.Searchable;
+import org.skyshop.skyshop.model.search.SearchResult;
+import org.skyshop.skyshop.model.search.Searchable;
 
 @Service
 public class SearchService {

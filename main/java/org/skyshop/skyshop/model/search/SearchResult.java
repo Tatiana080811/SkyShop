@@ -1,4 +1,4 @@
-package org.skypro.skyshop.model.search;
+package org.skyshop.skyshop.model.search;
 
 import java.util.UUID;
 
@@ -17,7 +17,7 @@ public final class SearchResult {
         this.contentType = contentType;
     }
 
-    public static SearchResult fromSearchable(org.skypro.skyshop.model.search.Searchable searchable) {
+    public static SearchResult fromSearchable(org.skyshop.skyshop.model.search.Searchable searchable) {
         return new SearchResult(
                 searchable.getId(),
                 searchable.getName(),
