@@ -38,7 +38,7 @@ public class StorageService {
         return result;
     }
 
-    private void initializeTestData() {
+    public void initializeTestData() {
 
         Product product1 = new Product("Яблоко", new BigDecimal("50.0"));
         Product product2 = new Product("Простой персик", new BigDecimal("100.0"));
